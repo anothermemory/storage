@@ -1,3 +1,4 @@
+// Package storage contains common interfaces and implementation for all supported storage implementations.
 package storage
 
 import (
