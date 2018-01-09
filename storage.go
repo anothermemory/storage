@@ -2,11 +2,19 @@
 package storage
 
 import (
+	"encoding/json"
+
 	"github.com/anothermemory/unit"
 )
 
 // Storage represents some storage which can be used to store units
 type Storage interface {
+	// Storage must be able to marshal it's settings to json
+	json.Marshaler
+
+	// Storage must be able to unmarshal it's settings from json
+	json.Unmarshaler
+
 	// SaveUnit saves given unit to the storage.
 	SaveUnit(u unit.Unit) error
 
