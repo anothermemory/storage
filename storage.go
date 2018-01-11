@@ -32,4 +32,7 @@ type Storage interface {
 
 	// Remove removes storage
 	Remove() error
+
+	// Type is unique string that provides ability to differentiate storage instances
+	Type() string
 }
