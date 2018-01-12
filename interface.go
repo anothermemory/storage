@@ -7,8 +7,8 @@ import (
 	"github.com/anothermemory/unit"
 )
 
-// Storage represents some storage which can be used to store units
-type Storage interface {
+// Interface represents some storage which can be used to store units
+type Interface interface {
 	// Storage must be able to marshal it's settings to json
 	json.Marshaler
 
